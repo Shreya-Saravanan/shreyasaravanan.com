@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreya Saravanan | Data Analyst</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Top Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="#about" class="logo-mark">
+                <span>SHREYA</span>
+                <div class="logo-ring"></div>
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link active" data-text="About">
+                        <span class="nav-label">About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-text="My Work">
+                        <span class="nav-label">My Work</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="resume.html" class="nav-link" data-text="Resume">
+                        <span class="nav-label">Resume</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-text="Contact">
+                        <span class="nav-label">Contact</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="navbar-actions">
+                <div class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Section -->
+        <section id="about" class="section section--about">
+            <div class="section-container">
+                <div class="about-grid">
+                    <div class="about-visual">
+                        <div class="photo-frame">
+                            <div class="photo-wrapper">
+                                <img src="Shreya_headshot.jpeg" alt="Shreya Saravanan">
+                                <div class="photo-overlay"></div>
+                            </div>
+                            <div class="frame-accent frame-accent--top"></div>
+                            <div class="frame-accent frame-accent--bottom"></div>
+                        </div>
+                        <div class="floating-tags">
+                            <span class="tag tag--1">AI</span>
+                            <span class="tag tag--2">Data</span>
+                            <span class="tag tag--3">Business</span>
+                        </div>
+                    </div>
+
+                    <div class="about-content">
+                        <div class="section-label">
+                            <span class="label-line"></span>
+                            <!--<span>Introduction</span>-->
+                        </div>
+                        <h1 class="hero-title">
+                            <span class="title-line">Hello, I'm</span>
+                            <span class="title-name">Shreya<br>Saravanan</span>
+                        </h1>
+                        <p class="hero-subtitle">Data Analyst</p>
+                        <p class="about-description">
+                            I transform complex data into actionable insights that drive business decisions.
+                            With expertise in SQL, Python, and visualization tools like Tableau and Power BI,
+                            I uncover patterns and tell compelling stories through data.
+                        </p>
+                        <div class="about-meta">
+                            <div class="meta-item">
+                                <span class="meta-icon"><i class="fas fa-location-dot"></i></span>
+                                <span class="meta-text">San Jose, CA</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-icon"><i class="fas fa-circle"></i></span>
+                                <span class="meta-text status-available">Open to opportunities</span>
+                            </div>
+                        </div>
+                        <div class="about-cta">
+                            <a href="#contact" class="btn btn--primary">
+                                <span>Let's Connect</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#projects" class="btn btn--ghost">
+                                <span>View Work</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section section--projects">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-label">
+                        <span class="label-line"></span>
+                        <span>Portfolio</span>
+                    </div>
+                    <h2 class="section-title">Project Work</h2>
+                </div>
+
+                <div class="projects-showcase">
+                    <article class="project-item" data-project="1">
+                        <div class="project-visual">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Global Terrorism Dashboard">
+                            </div>
+                            <div class="project-number">01</div>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-category">Data Visualization</span>
+                            <h3 class="project-title">Global Terrorism Dashboard</h3>
+                            <p class="project-excerpt">Interactive web dashboard analyzing 190,000+ records with dynamic callbacks and customizable filters.</p>
+                            <div class="project-stack">
+                                <span>Python</span>
+                                <span>Dash</span>
+                                <span>Pandas</span>
+                                <span>Flask</span>
+                            </div>
+                            <!--<button class="project-trigger">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>-->
+                        </div>
+                    </article>
+
+                    <article class="project-item project-item--reverse" data-project="2">
+                        <div class="project-visual">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop" alt="Depression Analysis">
+                            </div>
+                            <div class="project-number">02</div>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-category">Data Analysis</span>
+                            <h3 class="project-title">Depression Dataset Analysis</h3>
+                            <p class="project-excerpt">Comprehensive analysis with Python and interactive Tableau dashboard featuring violin plots and advanced visualizations.</p>
+                            <div class="project-stack">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>Tableau</span>
+                                <span>Seaborn</span>
+                            </div>
+                           <!--<button class="project-trigger">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>-->
+                        </div>
+                    </article>
+
+                    <article class="project-item" data-project="3">
+                        <div class="project-visual">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Job Application Tracker">
+                            </div>
+                            <div class="project-number">03</div>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-category">Database Design</span>
+                            <h3 class="project-title">Job Application Tracker</h3>
+                            <p class="project-excerpt">Normalized SQL Server database with tables, constraints, data encryption, and views for data integrity and security.</p>
+                            <div class="project-stack">
+                                <span>SQL Server</span>
+                                <span>T-SQL</span>
+                                <span>Encryption</span>
+                            </div>
+                            <!--<button class="project-trigger">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>-->
+                        </div>
+                    </article>
+
+                    <article class="project-item project-item--reverse" data-project="4">
+                        <div class="project-visual">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop" alt="Rehabilitation Assessment">
+                            </div>
+                            <div class="project-number">04</div>
+                        </div>
+                        <div class="project-details">
+                            <span class="project-category">Deep Learning</span>
+                            <h3 class="project-title">Arm Rehabilitation Assessment</h3>
+                            <p class="project-excerpt">Real-time exercise classification system using ConvLSTM and LRCN architectures achieving 95%+ accuracy.</p>
+                            <div class="project-stack">
+                                <span>TensorFlow</span>
+                                <span>PyTorch</span>
+                                <span>MediaPipe</span>
+                                <span>Flask</span>
+                            </div>
+                            <!--<button class="project-trigger">
+                                <span>View Project</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>-->
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section--contact">
+            <div class="section-container">
+                <div class="contact-layout">
+                    <div class="contact-intro">
+                        <div class="section-label">
+                            <span class="label-line"></span>
+                            <span>Get in Touch</span>
+                        </div>
+                        <h2 class="contact-title">Let's create something amazing together</h2>
+                        <p class="contact-description">
+                            I'm always excited to collaborate on interesting projects.
+                            Whether you have a question or just want to say hi, I'll get back to you!
+                        </p>
+
+                        <div class="contact-methods">
+                            <a href="mailto:shreyasaravanan5@gmail.com" class="contact-method">
+                                <span class="method-icon"><i class="fas fa-envelope"></i></span>
+                                <span class="method-info">
+                                    <span class="method-label">Email</span>
+                                    <span class="method-value">shreyasaravanan5@gmail.com</span>
+                                </span>
+                            </a>
+                            <div class="contact-method">
+                                <span class="method-icon"><i class="fas fa-location-dot"></i></span>
+                                <span class="method-info">
+                                    <span class="method-label">Location</span>
+                                    <span class="method-value">San Jose, CA</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com/Shreya-Saravanan" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/shreya-saravanan/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Email Address</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" required placeholder=" ">
+                            <label for="subject">Subject</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <button type="submit" class="btn btn--submit">
+                            <span class="btn-content">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </span>
+                            <span class="btn-loader">
+                                <i class="fas fa-circle-notch fa-spin"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p> Copyright &copy; 2025 Shreya Saravanan. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-visual">
+                    <img src="" alt="" id="modalImage">
+                </div>
+                <div class="modal-details">
+                    <span class="modal-category" id="modalCategory"></span>
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="modal-stack" id="modalStack"></div>
+                    <div class="modal-actions">
+                        <a href="#" class="btn btn--primary">
+                            <span>Live Demo</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="#" class="btn btn--ghost">
+                            <span>Source Code</span>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
