@@ -3,7 +3,7 @@
    Interactive JavaScript Module
    ================================================ */
 
-// Project data
+// Project data (Shreya)
 const projectsData = {
     1: {
         title: 'Global Terrorism Dashboard',
