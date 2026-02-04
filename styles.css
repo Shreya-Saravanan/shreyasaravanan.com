@@ -1098,6 +1098,22 @@ img {
     opacity: 0.4;
 }
 
+.project-card-logo {
+    position: absolute;
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    opacity: 0.5;
+    border-radius: 6px;
+    transition: opacity var(--duration-normal);
+}
+
+.project-card:hover .project-card-logo {
+    opacity: 0.85;
+}
+
 .project-card-category {
     display: inline-block;
     font-size: var(--text-xs);
