@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Shreya Saravanan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Top Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="index.html#about" class="logo-mark">
+                <span>SHREYA</span>
+                <div class="logo-ring"></div>
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link" data-text="About">
+                        <span class="nav-label">About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#projects" class="nav-link active" data-text="My Work">
+                        <span class="nav-label">My Work</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="resume.html" class="nav-link" data-text="Resume">
+                        <span class="nav-label">Resume</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link" data-text="Contact">
+                        <span class="nav-label">Contact</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="navbar-actions">
+                <div class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section section--project-detail" id="projectDetail">
+            <div class="section-container">
+                <!-- Back link -->
+                <a href="index.html#projects" class="project-back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Projects</span>
+                </a>
+
+                <!-- Project Header -->
+                <div class="project-detail-header">
+                    <div class="project-detail-meta">
+                        <span class="project-detail-number" id="detailNumber"></span>
+                        <span class="project-detail-category" id="detailCategory"></span>
+                    </div>
+                    <h1 class="project-detail-title" id="detailTitle"></h1>
+                </div>
+
+                <!-- Project Image -->
+                <div class="project-detail-image">
+                    <img src="" alt="" id="detailImage">
+                </div>
+
+                <!-- Project Content Grid -->
+                <div class="project-detail-content">
+                    <!-- Description -->
+                    <div class="project-detail-section">
+                        <h2 class="project-detail-section-title">
+                            <i class="fas fa-info-circle"></i> Overview
+                        </h2>
+                        <p class="project-detail-description" id="detailDescription"></p>
+                    </div>
+
+                    <!-- Architecture -->
+                    <div class="project-detail-section">
+                        <h2 class="project-detail-section-title">
+                            <i class="fas fa-sitemap"></i> Architecture
+                        </h2>
+                        <p class="project-detail-architecture" id="detailArchitecture"></p>
+                    </div>
+
+                    <!-- Key Highlights -->
+                    <div class="project-detail-section">
+                        <h2 class="project-detail-section-title">
+                            <i class="fas fa-star"></i> Key Highlights
+                        </h2>
+                        <ul class="project-detail-highlights" id="detailHighlights"></ul>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="project-detail-section">
+                        <h2 class="project-detail-section-title">
+                            <i class="fas fa-layer-group"></i> Tech Stack
+                        </h2>
+                        <div class="project-detail-stack" id="detailStack"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p> Copyright &copy; 2025 Shreya Saravanan. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
