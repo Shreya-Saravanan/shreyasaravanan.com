@@ -68,6 +68,54 @@ const projectsData = {
             'Flask web interface enabling remote rehabilitation monitoring'
         ],
         image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop'
+    },
+    5: {
+        title: 'Portfolio Website',
+        category: 'Web Development',
+        number: '05',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        description: 'Details coming soon.',
+        architecture: 'Details coming soon.',
+        highlights: [
+            'Details coming soon'
+        ],
+        image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop'
+    },
+    6: {
+        title: 'Amazon AWS Bootcamp',
+        category: 'Cloud Computing',
+        number: '06',
+        tech: ['AWS', 'EC2', 'S3', 'Lambda'],
+        description: 'Details coming soon.',
+        architecture: 'Details coming soon.',
+        highlights: [
+            'Details coming soon'
+        ],
+        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop'
+    },
+    7: {
+        title: 'AWS Lakehouse Mini Platform',
+        category: 'Data Engineering',
+        number: '07',
+        tech: ['AWS', 'S3', 'Glue', 'Athena'],
+        description: 'Details coming soon.',
+        architecture: 'Details coming soon.',
+        highlights: [
+            'Details coming soon'
+        ],
+        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop'
+    },
+    8: {
+        title: 'CNICA Excel Clear',
+        category: 'Data Analytics',
+        number: '08',
+        tech: ['Excel', 'Data Analysis', 'Reporting'],
+        description: 'Details coming soon.',
+        architecture: 'Details coming soon.',
+        highlights: [
+            'Details coming soon'
+        ],
+        image: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop'
     }
 };
 
