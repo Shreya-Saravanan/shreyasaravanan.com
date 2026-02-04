@@ -3,49 +3,133 @@
    Interactive JavaScript Module
    ================================================ */
 
-// Project data
+// Project data (Shreya)
 const projectsData = {
     1: {
         title: 'Global Terrorism Dashboard',
         category: 'Data Visualization',
+        number: '01',
         tech: ['Python', 'Dash', 'Pandas', 'Flask', 'Plotly'],
         description: 'Analyzed a comprehensive dataset of 190,000+ records from the Global Terrorism Database using Python for exploratory data analysis, identifying key trends and patterns in terrorism incidents worldwide. Designed and developed a user-friendly interactive web dashboard with dynamic callbacks and customizable dropdown menus to enable users to search incidents, explore patterns, and support predictive analysis decisions.',
+        architecture: 'The dashboard follows a layered architecture. The data layer uses Pandas for ETL operations on the raw CSV dataset, performing cleaning, aggregation, and transformation. The application layer is built on Flask with Dash, using callback functions to handle user interactions and dynamically update visualizations. Plotly generates interactive charts (choropleth maps, bar charts, time series) that respond to dropdown filters and date range selectors. The front-end uses Dash HTML and core components for layout and interactivity.',
+        highlights: [
+            'Processed and analyzed 190,000+ terrorism incident records',
+            'Dynamic callbacks enabling real-time filter updates across all charts',
+            'Choropleth world map with drill-down capability by region',
+            'Time series analysis revealing trends across decades',
+            'Customizable dropdown filters for attack type, target, and region'
+        ],
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'
     },
     2: {
         title: 'Depression Dataset Analysis',
         category: 'Data Analysis',
+        number: '02',
         tech: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Tableau'],
         description: 'Utilized Python (Pandas, Matplotlib, Seaborn) for data cleaning, outlier handling, and visualization. Developed an interactive Tableau dashboard with advanced plots including violin plots to analyze key factors influencing depression. Applied statistical methods to identify correlations and trends in mental health data.',
+        architecture: 'The analysis pipeline starts with data ingestion and cleaning using Pandas, handling missing values and outliers through IQR-based methods. The exploratory phase uses Matplotlib and Seaborn to generate distribution plots, correlation heatmaps, and violin plots for initial hypothesis formation. The final visualization layer is built in Tableau, connecting to the cleaned dataset and providing interactive dashboards with filters, parameter controls, and calculated fields for deeper exploration.',
+        highlights: [
+            'Comprehensive data cleaning pipeline handling missing values and outliers',
+            'Statistical correlation analysis across multiple demographic factors',
+            'Interactive Tableau dashboard with violin plots and advanced visualizations',
+            'Identified key demographic and lifestyle factors correlated with depression',
+            'Published insights with actionable recommendations for mental health research'
+        ],
         image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop'
     },
     3: {
         title: 'Job Application Tracker',
         category: 'Database Design',
+        number: '03',
         tech: ['SQL Server', 'T-SQL', 'Data Encryption', 'Database Normalization'],
         description: 'Designed and developed a normalized SQL Server database for a Job Application Tracker, implementing tables, constraints, data encryption, and views to ensure data integrity, structure, and security. Applied database design principles including normalization and encryption techniques for secure data handling.',
+        architecture: 'The database is designed following Third Normal Form (3NF) principles to minimize redundancy. Core entities include Users, Companies, Applications, Interviews, and Contacts, linked through foreign key relationships. Security is implemented using SQL Server\'s built-in encryption with symmetric keys and certificates for sensitive fields like salary expectations and notes. Database views provide pre-joined query results for common reporting needs, while stored procedures handle CRUD operations with input validation and error handling.',
+        highlights: [
+            'Normalized to 3NF ensuring data integrity and minimal redundancy',
+            'Column-level encryption for sensitive data using symmetric keys',
+            'Custom views for application status tracking and interview scheduling',
+            'Stored procedures with input validation and transaction management',
+            'Comprehensive constraint system including CHECK, UNIQUE, and FK constraints'
+        ],
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
     },
     4: {
         title: 'Arm Rehabilitation Assessment',
         category: 'Deep Learning',
+        number: '04',
         tech: ['TensorFlow', 'PyTorch', 'MediaPipe', 'OpenCV', 'Flask'],
         description: 'Engineered a real-time rehabilitation assessment system consolidating ConvLSTM and LRCN-based architectures for exercise classification with 95%+ accuracy. Built web application for webcam-enabled analysis using MediaPipe for pose detection and real-time feedback on exercise effectiveness.',
+        architecture: 'The system uses a multi-stage pipeline. The input stage captures video frames via webcam using OpenCV. MediaPipe\'s pose estimation model extracts 33 body landmarks in real-time, generating skeletal keypoint sequences. These sequences feed into two parallel deep learning architectures: ConvLSTM (combining spatial convolution with temporal LSTM) and LRCN (Long-term Recurrent Convolutional Network) for exercise classification. The Flask web server handles video streaming via WebSocket connections, processes frames server-side, and returns classification results and feedback to the browser interface in real-time.',
+        highlights: [
+            '95%+ classification accuracy across multiple rehabilitation exercises',
+            'Real-time pose detection using MediaPipe with 33 body landmarks',
+            'Dual architecture comparison: ConvLSTM vs LRCN for temporal modeling',
+            'Live webcam-based assessment with instant visual feedback',
+            'Flask web interface enabling remote rehabilitation monitoring'
+        ],
         image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop'
+    },
+    5: {
+        title: 'Portfolio Website',
+        category: 'Web Development',
+        number: '05',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        description: 'Details coming soon.',
+        architecture: 'Details coming soon.',
+        highlights: [
+            'Details coming soon'
+        ],
+        image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop'
+    },
+    6: {
+        title: 'Amazon AWS Bootcamp',
+        category: 'Cloud Computing',
+        number: '06',
+        tech: ['AWS', 'EC2', 'S3', 'Lambda'],
+        description: 'Details coming soon.',
+        architecture: 'Details coming soon.',
+        highlights: [
+            'Details coming soon'
+        ],
+        image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop'
+    },
+    7: {
+        title: 'AWS Lakehouse Mini Platform',
+        category: 'Data Engineering',
+        number: '07',
+        tech: ['AWS S3', 'AWS Glue', 'Spark ETL', 'Glue Data Catalog', 'Amazon Athena', 'Redshift Serverless', 'IAM', 'Parquet'],
+        description: 'Designed and built a mini AWS Lakehouse platform for financial data analytics to bridge the gap between conceptual knowledge and hands-on experience with modern cloud data stacks. The platform supports both ad-hoc analytics via Athena and warehouse-style analytics via Redshift, mirroring how production systems are designed. Raw data lands in S3, is transformed through Spark-based ETL with validation rules, and made analytics-ready through partitioning and columnar format optimization. The project was treated like a real-world engagement with documented design trade-offs, cost considerations, and IAM constraints.',
+        architecture: 'The system follows a layered lakehouse architecture. Amazon S3 serves as the foundation with raw and curated data layers (CSV to Parquet conversion). AWS Glue runs Spark-based ETL jobs for data cleaning, deduplication, enrichment, and partitioning. The Glue Data Catalog acts as the centralized metadata layer — the single source of truth for query engines, managing tables, schemas, and partitions. Amazon Athena provides serverless SQL queries directly on curated S3 data for ad-hoc analytics. Redshift Serverless was designed as an extensible warehouse layer for BI-style workloads, documented with IAM-aware and cost-safe decisions. Storage and compute are loosely coupled, and metadata is treated as a first-class citizen throughout the architecture.',
+        highlights: [
+            'End-to-end lakehouse architecture with raw and curated data layers in S3',
+            'Spark-based ETL pipeline with data cleaning, deduplication, enrichment, and partitioning',
+            'Centralized schema management via Glue Data Catalog decoupling storage from query engines',
+            'Serverless analytics with Athena for cost-effective ad-hoc querying on Parquet data',
+            'Redshift Serverless designed as extensible warehouse layer with documented IAM constraints',
+            'Production-oriented design decisions: serverless over provisioned, columnar formats, cost-aware architecture',
+            'Realistic financial datasets with scalable S3 folder structure (year/month partitioning)'
+        ],
+        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
+        archImage: 'AWS Lakehouse Mini Platform_Architecture.png'
+    },
+    8: {
+        title: 'LLM-Driven Address Parsing & Standardization Pipeline',
+        category: 'Data Analytics',
+        number: '08',
+        tech: ['LLM', 'Python', 'Data Pipeline'],
+        description: 'Details coming soon.',
+        architecture: 'Details coming soon.',
+        highlights: [
+            'Details coming soon'
+        ],
+        image: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop'
     }
 };
 
 // DOM Elements
 const cursorDot = document.querySelector('.cursor-dot');
 const cursorOutline = document.querySelector('.cursor-outline');
-const modal = document.getElementById('projectModal');
-const modalImage = document.getElementById('modalImage');
-const modalTitle = document.getElementById('modalTitle');
-const modalCategory = document.getElementById('modalCategory');
-const modalDescription = document.getElementById('modalDescription');
-const modalStack = document.getElementById('modalStack');
 const navLinks = document.querySelectorAll('.nav-link');
-const projectItems = document.querySelectorAll('.project-item');
 const themeToggle = document.getElementById('themeToggle');
 const contactForm = document.getElementById('contactForm');
 
@@ -85,12 +169,12 @@ function initCursor() {
 
 function animateCursor() {
     // Smooth follow for dot
-    cursorX += (mouseX - cursorX) * 0.2;
-    cursorY += (mouseY - cursorY) * 0.2;
+    cursorX += (mouseX - cursorX) * 0.5;
+    cursorY += (mouseY - cursorY) * 0.5;
 
-    // Slower follow for outline
-    outlineX += (mouseX - outlineX) * 0.1;
-    outlineY += (mouseY - outlineY) * 0.1;
+    // Slightly delayed follow for outline
+    outlineX += (mouseX - outlineX) * 0.25;
+    outlineY += (mouseY - outlineY) * 0.25;
 
     if (cursorDot && cursorOutline) {
         cursorDot.style.transform = `translate(${cursorX - 4}px, ${cursorY - 4}px)`;
@@ -174,56 +258,46 @@ function updateThemeIcon(theme) {
 }
 
 // ================================================
-// Project Modal
+// Project Detail Page
 // ================================================
-function initModal() {
-    // Open modal
-    projectItems.forEach(item => {
-        const trigger = item.querySelector('.project-trigger');
+function initProjectDetail() {
+    const detailSection = document.getElementById('projectDetail');
+    if (!detailSection) return;
 
-        trigger.addEventListener('click', () => {
-            const projectId = item.getAttribute('data-project');
-            const project = projectsData[projectId];
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get('id');
+    const project = projectsData[projectId];
 
-            if (project) {
-                openModal(project);
-            }
-        });
-    });
+    if (!project) {
+        window.location.href = 'index.html#projects';
+        return;
+    }
 
-    // Close modal
-    const closeBtn = document.querySelector('.modal-close');
-    const backdrop = document.querySelector('.modal-backdrop');
+    document.title = project.title + ' | Shreya Saravanan';
 
-    closeBtn.addEventListener('click', closeModal);
-    backdrop.addEventListener('click', closeModal);
+    document.getElementById('detailCategory').textContent = project.category;
+    document.getElementById('detailTitle').textContent = project.title;
+    document.getElementById('detailDescription').textContent = project.description;
+    document.getElementById('detailArchitecture').textContent = project.architecture;
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
-    });
-}
+    // Architecture diagram image
+    if (project.archImage) {
+        const archWrap = document.getElementById('detailArchImageWrap');
+        const archImg = document.getElementById('detailArchImage');
+        archWrap.style.display = '';
+        archImg.src = project.archImage;
+        archImg.alt = project.title + ' Architecture';
+    }
 
-function openModal(project) {
-    modalImage.src = project.image;
-    modalImage.alt = project.title;
-    modalTitle.textContent = project.title;
-    modalCategory.textContent = project.category;
-    modalDescription.textContent = project.description;
-
-    // Generate tech stack tags
-    modalStack.innerHTML = project.tech
-        .map(tech => `<span>${tech}</span>`)
+    const highlightsList = document.getElementById('detailHighlights');
+    highlightsList.innerHTML = project.highlights
+        .map(h => `<li>${h}</li>`)
         .join('');
 
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
+    const stackContainer = document.getElementById('detailStack');
+    stackContainer.innerHTML = project.tech
+        .map(t => `<span>${t}</span>`)
+        .join('');
 }
 
 // ================================================
@@ -446,10 +520,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initCursor();
     initNavigation();
     initTheme();
-    initModal();
+    initProjectDetail();
     initSkillBars();
     initScrollAnimations();
-    initContactForm();
+    if (contactForm) initContactForm();
     initParallax();
     initMagneticButtons();
     initLoadAnimation();
