@@ -97,19 +97,26 @@ const projectsData = {
         title: 'AWS Lakehouse Mini Platform',
         category: 'Data Engineering',
         number: '07',
-        tech: ['AWS', 'S3', 'Glue', 'Athena'],
-        description: 'Details coming soon.',
-        architecture: 'Details coming soon.',
+        tech: ['AWS S3', 'AWS Glue', 'Spark ETL', 'Glue Data Catalog', 'Amazon Athena', 'Redshift Serverless', 'IAM', 'Parquet'],
+        description: 'Designed and built a mini AWS Lakehouse platform for financial data analytics to bridge the gap between conceptual knowledge and hands-on experience with modern cloud data stacks. The platform supports both ad-hoc analytics via Athena and warehouse-style analytics via Redshift, mirroring how production systems are designed. Raw data lands in S3, is transformed through Spark-based ETL with validation rules, and made analytics-ready through partitioning and columnar format optimization. The project was treated like a real-world engagement with documented design trade-offs, cost considerations, and IAM constraints.',
+        architecture: 'The system follows a layered lakehouse architecture. Amazon S3 serves as the foundation with raw and curated data layers (CSV to Parquet conversion). AWS Glue runs Spark-based ETL jobs for data cleaning, deduplication, enrichment, and partitioning. The Glue Data Catalog acts as the centralized metadata layer — the single source of truth for query engines, managing tables, schemas, and partitions. Amazon Athena provides serverless SQL queries directly on curated S3 data for ad-hoc analytics. Redshift Serverless was designed as an extensible warehouse layer for BI-style workloads, documented with IAM-aware and cost-safe decisions. Storage and compute are loosely coupled, and metadata is treated as a first-class citizen throughout the architecture.',
         highlights: [
-            'Details coming soon'
+            'End-to-end lakehouse architecture with raw and curated data layers in S3',
+            'Spark-based ETL pipeline with data cleaning, deduplication, enrichment, and partitioning',
+            'Centralized schema management via Glue Data Catalog decoupling storage from query engines',
+            'Serverless analytics with Athena for cost-effective ad-hoc querying on Parquet data',
+            'Redshift Serverless designed as extensible warehouse layer with documented IAM constraints',
+            'Production-oriented design decisions: serverless over provisioned, columnar formats, cost-aware architecture',
+            'Realistic financial datasets with scalable S3 folder structure (year/month partitioning)'
         ],
-        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop'
+        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
+        archImage: 'AWS Lakehouse Mini Platform_Architecture.png'
     },
     8: {
-        title: 'CNICA Excel Clear',
+        title: 'LLM-Driven Address Parsing & Standardization Pipeline',
         category: 'Data Analytics',
         number: '08',
-        tech: ['Excel', 'Data Analysis', 'Reporting'],
+        tech: ['LLM', 'Python', 'Data Pipeline'],
         description: 'Details coming soon.',
         architecture: 'Details coming soon.',
         highlights: [
@@ -162,12 +169,12 @@ function initCursor() {
 
 function animateCursor() {
     // Smooth follow for dot
-    cursorX += (mouseX - cursorX) * 0.2;
-    cursorY += (mouseY - cursorY) * 0.2;
+    cursorX += (mouseX - cursorX) * 0.5;
+    cursorY += (mouseY - cursorY) * 0.5;
 
-    // Slower follow for outline
-    outlineX += (mouseX - outlineX) * 0.1;
-    outlineY += (mouseY - outlineY) * 0.1;
+    // Slightly delayed follow for outline
+    outlineX += (mouseX - outlineX) * 0.25;
+    outlineY += (mouseY - outlineY) * 0.25;
 
     if (cursorDot && cursorOutline) {
         cursorDot.style.transform = `translate(${cursorX - 4}px, ${cursorY - 4}px)`;
@@ -268,15 +275,19 @@ function initProjectDetail() {
 
     document.title = project.title + ' | Shreya Saravanan';
 
-    document.getElementById('detailNumber').textContent = project.number;
     document.getElementById('detailCategory').textContent = project.category;
     document.getElementById('detailTitle').textContent = project.title;
     document.getElementById('detailDescription').textContent = project.description;
     document.getElementById('detailArchitecture').textContent = project.architecture;
 
-    const detailImage = document.getElementById('detailImage');
-    detailImage.src = project.image;
-    detailImage.alt = project.title;
+    // Architecture diagram image
+    if (project.archImage) {
+        const archWrap = document.getElementById('detailArchImageWrap');
+        const archImg = document.getElementById('detailArchImage');
+        archWrap.style.display = '';
+        archImg.src = project.archImage;
+        archImg.alt = project.title + ' Architecture';
+    }
 
     const highlightsList = document.getElementById('detailHighlights');
     highlightsList.innerHTML = project.highlights

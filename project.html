@@ -72,51 +72,34 @@
                 <!-- Project Header -->
                 <div class="project-detail-header">
                     <div class="project-detail-meta">
-                        <span class="project-detail-number" id="detailNumber"></span>
                         <span class="project-detail-category" id="detailCategory"></span>
                     </div>
                     <h1 class="project-detail-title" id="detailTitle"></h1>
                 </div>
 
-                <!-- Project Image -->
-                <div class="project-detail-image">
-                    <img src="" alt="" id="detailImage">
-                </div>
+                <!-- Article Content (Medium-style) -->
+                <article class="project-detail-article">
+                    <!-- Overview -->
+                    <h2 class="project-detail-section-title">Overview</h2>
+                    <p class="project-detail-description" id="detailDescription"></p>
 
-                <!-- Project Content Grid -->
-                <div class="project-detail-content">
-                    <!-- Description -->
-                    <div class="project-detail-section">
-                        <h2 class="project-detail-section-title">
-                            <i class="fas fa-info-circle"></i> Overview
-                        </h2>
-                        <p class="project-detail-description" id="detailDescription"></p>
+                    <!-- Architecture Diagram -->
+                    <div class="project-detail-arch-image" id="detailArchImageWrap" style="display:none;">
+                        <img src="" alt="" id="detailArchImage">
                     </div>
 
                     <!-- Architecture -->
-                    <div class="project-detail-section">
-                        <h2 class="project-detail-section-title">
-                            <i class="fas fa-sitemap"></i> Architecture
-                        </h2>
-                        <p class="project-detail-architecture" id="detailArchitecture"></p>
-                    </div>
+                    <h2 class="project-detail-section-title">Architecture</h2>
+                    <p class="project-detail-architecture" id="detailArchitecture"></p>
 
                     <!-- Key Highlights -->
-                    <div class="project-detail-section">
-                        <h2 class="project-detail-section-title">
-                            <i class="fas fa-star"></i> Key Highlights
-                        </h2>
-                        <ul class="project-detail-highlights" id="detailHighlights"></ul>
-                    </div>
+                    <h2 class="project-detail-section-title">Key Highlights</h2>
+                    <ul class="project-detail-highlights" id="detailHighlights"></ul>
 
                     <!-- Tech Stack -->
-                    <div class="project-detail-section">
-                        <h2 class="project-detail-section-title">
-                            <i class="fas fa-layer-group"></i> Tech Stack
-                        </h2>
-                        <div class="project-detail-stack" id="detailStack"></div>
-                    </div>
-                </div>
+                    <h2 class="project-detail-section-title">Tech Stack</h2>
+                    <div class="project-detail-stack" id="detailStack"></div>
+                </article>
             </div>
         </section>
 
